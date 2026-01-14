@@ -14,43 +14,120 @@
 </head>
 
 <body>
-    <header class="app-header">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid px-4">
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid col-12 d-flex justify-content-between align-items-center">
 
                 <!-- Logo -->
-                <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-                    <span class="logo-icon"></span>
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="assets/images/LogoIcon.svg" alt="Grid logo" class="logo-icon me-2" />
                     <span class="logo-text">Grid</span>
                 </a>
 
                 <!-- Nav Links -->
-                <ul class="navbar-nav mx-auto align-items-center gap-3">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">How it works</a>
-                    </li>
-                    <span class="nav-dot"></span>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Who we are</a>
-                    </li>
-                    <span class="nav-dot"></span>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">What we do</a>
-                    </li>
-                    <span class="nav-dot"></span>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact us</a>
-                    </li>
-                </ul>
+                <nav class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav mx-auto align-items-center gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link nav-link--active" href="#">How it works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Who we are</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">What we do</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact us</a>
+                        </li>
+                    </ul>
+                </nav>
 
                 <!-- Sign In Button -->
-                <a href="#" class="btn btn-signin">
-                    Sign In
-                </a>
+                <a class="btn btn-signin ms-lg-3" href="#">Sign In</a>
 
             </div>
         </nav>
     </header>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container-fluid col-12 d-flex flex-column feature-contents">
+
+            <!-- Section Header -->
+            <header class="features-header row align-items-flex-start  ">
+                <h2 id="features-heading" class="features-title">
+                    Delivering good designs since 1954 🚚💨
+                </h2>
+                <p class="features-description">
+                    We’re the first multi-purpose design kit solutions for businesses.
+                    We help you bridge
+                    gaps between your layouts, templates and developers
+                    to empower all involved.
+                </p>
+            </header>
+
+            <div class="row gx-4 gy-4 justify-content-center">
+
+                <!-- Feature 1 -->
+                <article class="col-12 col-md-6 col-lg-3 feature-card">
+                    <a class="feature-icon icon-pink" aria-hidden="true">
+                        <img src="assets/images/icon-phone-call.svg" alt="Support icon" class="logo-icon" />
+                    </a>
+                    <h3 class="feature-title">Support</h3>
+                    <p class="feature-text">
+                        Delivering faster and more personalized support with shared screens
+                        and cool design systems for Figma
+                    </p>
+                    <a href="#" class="feature-link">Learn more</a>
+                </article>
+
+                <!-- Feature 2 -->
+                <article class="col-12 col-md-6 col-lg-3 feature-card">
+                    <a class="feature-icon icon-blue" aria-hidden="true">
+                        <img src="assets/images/icon-pie-chart.svg" alt="Sales icon" class="logo-icon" />
+                    </a>
+                    <h3 class="feature-title">Sales growth</h3>
+                    <p class="feature-text">
+                        Identify qualified customers with easy-to-use live chat messaging
+                        and AI-based Sales Bot
+                    </p>
+                    <a href="#" class="feature-link">Learn more</a>
+                </article>
+
+                <!-- Feature 3 -->
+                <article class="col-12 col-md-6 col-lg-3 feature-card">
+                    <a class="feature-icon icon-purple" aria-hidden="true">
+                        <img src="assets/images/icon-zap.svg" alt="Components icon" class="logo-icon" />
+                    </a>
+                    <h3 class="feature-title">Components-driven</h3>
+                    <p class="feature-text">
+                        Delivering faster and more personalized support with shared screens
+                        and cool design systems for Figma
+                    </p>
+                    <a href="#" class="feature-link">Learn more</a>
+                </article>
+
+                <!-- Feature 4 -->
+                <article class="col-12 col-md-6 col-lg-3 feature-card">
+                    <a class="feature-icon icon-green" aria-hidden="true">
+                        <img src="assets/images/icon-thumbs-up.svg" alt="Thumbs up icon" class="logo-icon" />
+                    </a>
+                    <h3 class="feature-title">Swap the icon</h3>
+                    <p class="feature-text">
+                        You can toggle to any icon within Instances and customize outlined
+                        stroke to more bolder or lighter
+                    </p>
+                    <a href="#" class="feature-link">Learn more</a>
+                </article>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+
+
 
 
 </body>

@@ -1,23 +1,54 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
-body {
-  font-family: "Inter", sans-serif;
-  background-color: #ffffff;
+// Font Import
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+// Variables
+
+$font-primary: 'Inter', sans-serif;
+$purple: #6C5CE7;
+$yellow: #FDCB6E;
+$dark: #2D3436;
+$white: #ffffff;
+
+$maxWidth: 1200px;
+
+// Mixins
+
+@mixin text-style($color, $weight) {
+  color: $color;
+  font-weight: $weight;
 }
 
+
+// Global Styles
+
+body {
+  font-family: $font-primary;
+  background-color: $white;
+}
+
+//-------------------------------------------------- Header --------------------------------------------------
+
+// Header
+
 .site-header {
-  background: #ffffff;
+  background: $white;
+  // box-shadow: 0 6px 0 rgba(0, 0, 0, 1);
   border-bottom: 1px solid #dfe6e9;
 }
 
+// Logo
+
 .logo-text {
-  color: #2D3436;
-  font-weight: 700;
+  @include text-style($dark, 700);
   font-size: 48px;
   line-height: 1;
 }
 
+// Navigation Links
+
 .navbar {
-  max-width: 1200px;
+  max-width: $maxWidth;
   margin: 0 auto;
   padding: 10px 20px;
   width: 100%;
@@ -26,52 +57,61 @@ body {
 
 .nav-link {
   font-size: 18px;
-  color: #6C5CE7;
-  font-weight: 400;
+  @include text-style($purple, 400);
   padding: 0;
-}
-.nav-link:hover {
-  opacity: 0.8;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
+// Active link
+
 .nav-link--active {
-  color: #2D3436;
-  font-weight: 700;
+  @include text-style($dark, 700);
 }
+
+// Navigation Divider
 
 .nav-divider {
   font-size: 18px;
   line-height: 1;
-  color: #FDCB6E;
+  color: $yellow;
   user-select: none;
 }
 
+// Sign In Button
+
 .btn-signin {
   font-size: 24px;
-  color: #ffffff;
-  font-weight: 700;
+  @include text-style($white, 700);
   padding: 12px 28px;
   border-radius: 999px;
-  background: linear-gradient(135deg, #6C5CE7);
+  background: linear-gradient(135deg, $purple);
   border: none;
+
+  &:hover {
+    opacity: 0.9;
+    color: $white;
+  }
 }
-.btn-signin:hover {
-  opacity: 0.9;
-  color: #ffffff;
-}
+
+
+//-------------------------------------------------- Featured Section --------------------------------------------------
 
 .features-section {
   padding: 5rem 0;
-  background-color: #ffffff;
+  background-color: $white;
   margin: 0 auto;
 }
 
 .feature-contents {
-  max-width: 1200px;
+  max-width: $maxWidth;
   margin: 0 auto;
   padding: 0 20px;
 }
 
+// Features Header
 .features-header {
   margin-bottom: 4rem;
   max-width: 1170px;
@@ -81,7 +121,7 @@ body {
 .features-title {
   font-size: 32px;
   font-weight: 700;
-  color: #2D3436;
+  color: $dark;
 }
 
 .features-description {
@@ -90,7 +130,9 @@ body {
   color: #636e72;
   line-height: 36px;
   max-width: 1000px;
+
 }
+
 
 .feature-card {
   display: flex;
@@ -106,18 +148,20 @@ body {
   display: grid;
   place-items: center;
   font-size: 22px;
-  color: #ffffff;
+  color: $white;
   overflow: hidden;
-}
-.feature-icon img {
-  width: 56px;
-  height: 56px;
-  object-fit: contain;
-  display: block;
+
+  img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    display: block;
+  }
 }
 
 .icon-pink {
   background-color: #e84393;
+
 }
 
 .icon-blue {
@@ -125,17 +169,18 @@ body {
 }
 
 .icon-purple {
-  background-color: #6C5CE7;
+  background-color: $purple;
 }
 
 .icon-green {
   background-color: #00b894;
 }
 
+// Card Text
 .feature-title {
   font-size: 24px;
   font-weight: 700;
-  color: #2D3436;
+  color: $dark;
   margin-top: 0.75rem;
 }
 
@@ -145,31 +190,36 @@ body {
   color: #636e72;
   line-height: 32px;
   min-height: 128px;
+
 }
 
+// Learn More Link
 .feature-link {
   font-size: 14px;
   font-weight: 600;
-  color: #6C5CE7;
+  color: $purple;
   text-decoration: none;
   display: inline-block;
   width: fit-content;
   padding: 6px 16px;
   border: 1px solid #dfe6e9;
   border-radius: 10px;
-}
-.feature-link:hover {
-  background-color: #6C5CE7;
-  color: #ffffff;
-  border-color: #6C5CE7;
+
+  &:hover {
+    background-color: $purple;
+    color: $white;
+    border-color: $purple;
+  }
 }
 
+//-------------------------------------------------- Responsive Styles --------------------------------------------------
+
 @media (max-width: 980px) {
+
+  // Featured Section
   .feature-card {
     max-width: 300px;
     margin: 0 40px;
     padding: 20px 0;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
