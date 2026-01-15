@@ -16,29 +16,40 @@
 <body>
     <header class="site-header">
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
-            <div class="container-fluid col-12 d-flex justify-content-between align-items-center">
+            <div class="container-fluid col-12 d-flex justify-content-between align-items-center section-contents">
 
                 <!-- Logo -->
                 <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="assets/images/LogoIcon.svg" alt="Grid logo" class="logo-icon me-2" />
+                    <img src="assets/images/LogoIcon.svg" alt="Grid logo" class="logo-icon me-2" id="navbarLogo" />
                     <span class="logo-text">Grid</span>
                 </a>
 
                 <!-- Nav Links -->
                 <nav class="collapse navbar-collapse" id="navbarContent">
                     <ul class="navbar-nav mx-auto align-items-center gap-3">
+
                         <li class="nav-item">
                             <a class="nav-link nav-link--active" href="#">How it works</a>
                         </li>
+
+                        <span class="nav-divider">•</span>
+
                         <li class="nav-item">
                             <a class="nav-link" href="#">Who we are</a>
                         </li>
+
+                        <span class="nav-divider">•</span>
+
                         <li class="nav-item">
                             <a class="nav-link" href="#">What we do</a>
                         </li>
+
+                        <span class="nav-divider">•</span>
+
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact us</a>
                         </li>
+
                     </ul>
                 </nav>
 
@@ -50,12 +61,12 @@
     </header>
 
     <!-- Features Section -->
-    <section class="features-section">
-        <div class="container-fluid col-12 d-flex flex-column feature-contents">
+    <section class="page-section">
+        <div class="container-fluid col-12 d-flex flex-column section-contents">
 
             <!-- Section Header -->
-            <header class="features-header row align-items-flex-start  ">
-                <h2 id="features-heading" class="features-title">
+            <header class="features-header row align-items-flex-start feature-header">
+                <h2 class="features-title">
                     Delivering good designs since 1954 🚚💨
                 </h2>
                 <p class="features-description">
@@ -126,10 +137,206 @@
     </section>
 
     <!-- Pricing Section -->
+    <section class="page-section">
+        <div class="container-fluid col-12 d-flex flex-column section-contents">
+
+            <!-- Section Header -->
+            <header class="pricing-header row mb-5">
+                <h2 class="pricing-title text-center">
+                    Affordable pricing
+                </h2>
+                <p class="pricing-description text-center">
+                    Bill me <span class="billing-active">monthly</span> • yearly
+                </p>
+            </header>
+            <!-- Plans -->
+            <div class="row justify-content-center g-4">
+
+                <!-- Free Plan -->
+                <article class="col-12 col-md-6 col-lg-4">
+                    <section class="pricing-card" aria-labelledby="plan-free">
+                        <header>
+                            <p class="plan-label" id="plan-free">Free</p>
+                            <h3 class="price">
+                                Free <span>/ FOREVER</span>
+                            </h3>
+                        </header>
+
+                        <ul class="features">
+                            <li>Components-driven system</li>
+                            <li>Sales-boosting landing pages</li>
+                            <li>Awesome Feather icons pack</li>
+                        </ul>
+
+                        <footer>
+                            <button class="btn btn-outline-primary w-100">
+                                Try for free
+                            </button>
+                        </footer>
+                    </section>
+                </article>
+
+                <!-- Individual Plan (Featured) -->
+                <article class="col-12 col-md-6 col-lg-4">
+                    <section class="pricing-card featured" aria-labelledby="plan-individual">
+                        <span class="badge-best" aria-hidden="true">BEST!</span>
+
+                        <header>
+                            <p class="plan-label" id="plan-individual">Individual</p>
+                            <h3 class="price">
+                                $24 <span>/ MONTH</span>
+                            </h3>
+                        </header>
+
+                        <ul class="features">
+                            <li>Components-driven system</li>
+                            <li>Sales-boosting landing pages</li>
+                            <li>Awesome Feather icons pack</li>
+                            <li>Themed into 3 different styles</li>
+                            <li>Will help to learn Figma</li>
+                        </ul>
+
+                        <footer>
+                            <button class="btn btn-primary w-100">
+                                Regular license
+                            </button>
+                        </footer>
+                    </section>
+                </article>
+
+                <!-- Corporate Plan -->
+                <article class="col-12 col-md-6 col-lg-4">
+                    <section class="pricing-card corporate" aria-labelledby="plan-corporate">
+                        <header>
+                            <p class="plan-label" id="plan-corporate">Corporate</p>
+                            <h3 class="price">
+                                $12 <span>/ EDITOR</span>
+                            </h3>
+                        </header>
+
+                        <ul class="features corporate">
+                            <li>Components-driven system</li>
+                            <li>Sales-boosting landing pages</li>
+                            <li>Awesome Feather icons pack</li>
+                            <li>Themed into 3 different styles</li>
+                        </ul>
+
+                        <footer>
+                            <button class="btn btn-outline-primary w-100">
+                                Extended license
+                            </button>
+                        </footer>
+                    </section>
+                </article>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer pt-5">
+        <div class="container-fluid col-12 d-flex flex-column section-contents">
+            <div class="row gy-5">
+
+                <!-- LEFT -->
+                <section class="col-lg-6">
+                    <section class="footer-section mb-4">
+                        <h2 class="footer-label">Follow Us</h2>
+
+                        <nav aria-label="Social media">
+                            <ul class="social-list">
+                                <li><a href="#" class="social-icon facebook" aria-label="Facebook">f</a></li>
+                                <li><a href="#" class="social-icon" aria-label="LinkedIn">in</a></li>
+                                <li><a href="#" class="social-icon" aria-label="Dribbble">#</a></li>
+                                <li><a href="#" class="social-icon" aria-label="Twitter">𝕏</a></li>
+                            </ul>
+                        </nav>
+                    </section>
+
+                    <nav aria-label="Footer navigation">
+                        <div class="row">
+                            <section class="col-md-4">
+                                <h3 class="footer-label">Information</h3>
+                                <ul class="footer-links">
+                                    <li><a href="#">About Faster app</a></li>
+                                    <li><a href="#">Get in Touch</a></li>
+                                    <li><a href="#">Things We Like</a></li>
+                                </ul>
+                            </section>
+
+                            <section class="col-md-4">
+                                <h3 class="footer-label visually-hidden">Policies</h3>
+                                <ul class="footer-links">
+                                    <li><a href="#" class="active">Onhovered / Active</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Terms of Service</a></li>
+                                </ul>
+                            </section>
+
+                            <section class="col-md-4">
+                                <h3 class="footer-label visually-hidden">Company</h3>
+                                <ul class="footer-links">
+                                    <li><a href="#">We are hiring!</a></li>
+                                    <li><a href="#">Resources</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </nav>
+                </section>
+
+                <!-- RIGHT -->
+                <section class="col-lg-6">
+                    <address class="footer-section mb-4">
+                        <h2 class="footer-label">Follow Us</h2>
+                        <a href="mailto:hello@fasterapp.com" class="footer-email">
+                            hello@fasterapp.com
+                        </a>
+                    </address>
+
+                    <section class="footer-section">
+                        <h2 class="footer-label">Keep in Touch</h2>
+
+                        <form class="contact-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="visually-hidden">Name</label>
+                                    <input id="name" type="text" class="form-control" placeholder="Your name">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="email" class="visually-hidden">Email</label>
+                                    <input id="email" type="email" class="form-control" placeholder="E-mail">
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="message" class="visually-hidden">Message</label>
+                                    <textarea id="message" class="form-control message-input" rows="3"
+                                        placeholder="Leave your message"></textarea>
+                                </div>
+
+                                <div class="col-12 text-end">
+                                    <button type="submit" class="btn btn-send">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Wave Image -->
+        <figure class="footer-wave" aria-hidden="true">
+            <img src="assets/images/Wave.svg" alt="">
+        </figure>
+    </footer>
 
 
 
 
+    <!-- JS -->
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

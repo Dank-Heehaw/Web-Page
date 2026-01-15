@@ -8,9 +8,11 @@ $font-primary: 'Inter', sans-serif;
 $purple: #6C5CE7;
 $yellow: #FDCB6E;
 $dark: #2D3436;
+$grey: #adadad;
 $white: #ffffff;
 
 $maxWidth: 1200px;
+$line-height-base: 36px;
 
 // Mixins
 
@@ -19,12 +21,23 @@ $maxWidth: 1200px;
   font-weight: $weight;
 }
 
-
-// Global Styles
+//-------------------------------------------------- Global --------------------------------------------------
 
 body {
   font-family: $font-primary;
   background-color: $white;
+}
+
+.section-contents {
+  max-width: 1170px;
+  justify-content: left;
+  padding: 0 20px;
+}
+
+.page-section {
+  padding: 3.5rem 0;
+  background-color: $white;
+  margin: 0 auto;
 }
 
 //-------------------------------------------------- Header --------------------------------------------------
@@ -33,8 +46,9 @@ body {
 
 .site-header {
   background: $white;
-  // box-shadow: 0 6px 0 rgba(0, 0, 0, 1);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 1);
   border-bottom: 1px solid #dfe6e9;
+  height: 96px;
 }
 
 // Logo
@@ -42,18 +56,10 @@ body {
 .logo-text {
   @include text-style($dark, 700);
   font-size: 48px;
-  line-height: 1;
+  line-height: $line-height-base;
 }
 
 // Navigation Links
-
-.navbar {
-  max-width: $maxWidth;
-  margin: 0 auto;
-  padding: 10px 20px;
-  width: 100%;
-  align-self: center;
-}
 
 .nav-link {
   font-size: 18px;
@@ -75,7 +81,7 @@ body {
 
 .nav-divider {
   font-size: 18px;
-  line-height: 1;
+  line-height: $line-height-base;
   color: $yellow;
   user-select: none;
 }
@@ -99,11 +105,7 @@ body {
 
 //-------------------------------------------------- Featured Section --------------------------------------------------
 
-.features-section {
-  padding: 5rem 0;
-  background-color: $white;
-  margin: 0 auto;
-}
+
 
 .feature-contents {
   max-width: $maxWidth;
@@ -112,10 +114,9 @@ body {
 }
 
 // Features Header
-.features-header {
-  margin-bottom: 4rem;
-  max-width: 1170px;
-  justify-content: left;
+
+.feature-header {
+  margin-bottom: 3rem;
 }
 
 .features-title {
@@ -128,7 +129,7 @@ body {
   font-size: 24px;
   font-weight: 400;
   color: #636e72;
-  line-height: 36px;
+  line-height: $line-height-base;
   max-width: 1000px;
 
 }
@@ -187,8 +188,8 @@ body {
 .feature-text {
   font-size: 18px;
   font-weight: 400;
-  color: #636e72;
-  line-height: 32px;
+  color: $grey;
+  line-height: $line-height-base;
   min-height: 128px;
 
 }
@@ -212,9 +213,313 @@ body {
   }
 }
 
+//-------------------------------------------------- Pricing Styles --------------------------------------------------
+
+.pricing-title {
+  font-size: 64px;
+  font-weight: 900;
+  color: $dark;
+  letter-spacing: -1px;
+  padding: 20px 0px;
+}
+
+.pricing-description {
+  font-size: 32px;
+  font-weight: 700;
+  color: $grey;
+  line-height: 48px;
+  letter-spacing: -0.5px;
+
+  // Billing Active Span
+  .billing-active {
+    position: relative;
+    color: $purple;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0px;
+      width: 100%;
+      height: 15px;
+      background-color: $yellow;
+      border-radius: 999px;
+      z-index: -1;
+    }
+  }
+}
+
+
+
+/* Pricing Card */
+.pricing-card {
+  max-width: 370px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  text-align: left;
+  position: relative;
+  height: 100%;
+
+  .plan-label {
+    color: $purple;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .price {
+    font-size: 48px;
+    font-weight: 700;
+    color: $dark;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+    line-height: 56px;
+
+    span {
+      font-size: 12px;
+      letter-spacing: 2.5px;
+
+    }
+  }
+
+  .features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+    height: 250px;
+
+    li {
+      position: relative;
+      padding-left: 2.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 18px;
+      letter-spacing: 0px;
+      color: $dark;
+
+      &::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 32px;
+        height: 32px;
+        background: #e2e2e2;
+        color: $dark;
+        font-size: 0.75rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  button {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+    background-color: $white;
+    border-color: $grey;
+    padding: 8px 16px;
+    border-radius: 16px;
+    color: $purple;
+
+
+    &:hover {
+      background-color: darken(#6c63ff, 5%);
+      border-color: darken(#6c63ff, 5%);
+    }
+  }
+}
+
+/* Featured Card */
+.pricing-card.featured {
+  box-shadow: 0 16px 24px 0px #26323814;
+
+  .badge-best {
+    position: absolute;
+    right: 1.5rem;
+    border: 1px solid $purple;
+    color: $purple;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  .features li::before {
+    background: $yellow;
+    color: $dark;
+  }
+
+  button {
+    font-size: 24px;
+    font-weight: 700;
+    background-color: #6c63ff;
+    border-color: #6c63ff;
+    color: $white;
+
+
+    &:hover {
+      background-color: darken(#6c63ff, 5%);
+      border-color: darken(#6c63ff, 5%);
+    }
+  }
+}
+
+// Corporate Card
+.pricing-card.corporate {
+  .features li {
+    &::before {
+      background: #aef8e3;
+      color: $dark;
+    }
+  }
+}
+
+//-------------------------------------------------- Footer Styles ------------------------------------------------------
+
+.site-footer {
+  position: relative;
+  background: #fff;
+  padding-bottom: 0;
+
+  .footer-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #b6b6b6;
+    margin-bottom: 1rem;
+  }
+
+  /* Social */
+  .social-list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+
+    .social-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #6c63ff;
+      color: #6c63ff;
+      text-decoration: none;
+      font-weight: 600;
+
+      &.facebook {
+        background: #ffe7a3;
+        border-color: transparent;
+      }
+
+      &:hover {
+        background: #6c63ff;
+        color: #fff;
+      }
+    }
+  }
+
+  /* Links */
+  .footer-links {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 0.75rem;
+
+      a {
+        color: #333;
+        text-decoration: none;
+
+        &.active,
+        &:hover {
+          color: #6c63ff;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  /* Email */
+  .footer-email {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #6c63ff;
+    text-decoration: none;
+  }
+
+  /* Form */
+  .contact-form {
+    .form-control {
+      background: #f3f3f3;
+      border: none;
+      border-radius: 14px;
+      padding: 0.75rem 1rem;
+
+      &:focus {
+        outline: 2px solid rgba(108, 99, 255, 0.3);
+        box-shadow: none;
+      }
+    }
+
+    .message-input {
+      background: #fff;
+      border: 2px solid #d6d3ff;
+    }
+  }
+
+  .btn-send {
+    background: #6c63ff;
+    color: #fff;
+    border-radius: 16px;
+    padding: 0.75rem 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &:hover {
+      background: darken(#6c63ff, 8%);
+    }
+  }
+
+  /* Wave image */
+  .footer-wave {
+    margin: 0;
+    line-height: 0;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+
 //-------------------------------------------------- Responsive Styles --------------------------------------------------
 
 @media (max-width: 980px) {
+
+  // Header
+
+  .site-header {
+    height: 72px;
+  }
+
+  .logo-text {
+    font-size: 24px;
+  }
+
+  .btn-signin {
+    font-size: 18px;
+    padding: 12px 28px;
+    border-radius: 10px;
+  }
 
   // Featured Section
   .feature-card {
@@ -222,4 +527,5 @@ body {
     margin: 0 40px;
     padding: 20px 0;
   }
+
 }
