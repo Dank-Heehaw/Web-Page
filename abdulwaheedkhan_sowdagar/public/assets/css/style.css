@@ -571,7 +571,6 @@ body {
   position: relative;
   border-radius: 1.5rem;
   overflow: hidden;
-  height: 100%;
 }
 .image-card img {
   position: absolute;
@@ -627,7 +626,7 @@ body {
   bottom: 1.25rem;
   color: #ffffff;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 38px;
   line-height: 56px;
   letter-spacing: -1px;
   text-shadow: 0 5px 0 #000;
@@ -635,7 +634,7 @@ body {
 }
 .caption.model-caption {
   top: 1.25rem;
-  left: 10%;
+  left: 18%;
 }
 .caption.team-caption {
   bottom: 1.25rem;

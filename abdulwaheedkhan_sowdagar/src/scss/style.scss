@@ -620,7 +620,6 @@ body {
   position: relative;
   border-radius: 1.5rem;
   overflow: hidden;
-  height: 100%;
 
   img {
     position: absolute;
@@ -682,7 +681,7 @@ body {
 .caption {
   position: absolute;
   bottom: 1.25rem;
-  @include text-style($white, 700, 48px);
+  @include text-style($white, 700, 38px);
   line-height: 56px;
   letter-spacing: -1px;
   text-shadow: 0 5px 0 #000;
@@ -690,7 +689,7 @@ body {
 
   &.model-caption {
     top: 1.25rem;
-    left: 10%;
+    left: 18%;
 
   }
 
