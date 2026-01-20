@@ -19,5 +19,10 @@
     "url": "https://github.com/Dank-Heehaw/Web-Page/issues"
   },
   "homepage": "https://github.com/Dank-Heehaw/Web-Page#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "lite-server": "^2.6.1",
+    "concurrently": "^7.6.0",
+    "sass": "^1.62.1"
+  }
 }
