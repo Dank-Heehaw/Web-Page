@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/Dank-Heehaw/Web-Page/issues"
   },
-  "homepage": "https://github.com/Dank-Heehaw/Web-Page#readme",
+  "homepage": "https://dank-heehaw.github.io/Web-Page/",
   "description": "",
   "dependencies": {
     "lite-server": "^2.6.1",
